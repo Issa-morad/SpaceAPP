@@ -26,6 +26,10 @@
 		C84AE95929255E280047E348 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = C84AE95829255E280047E348 /* CachedAsyncImage */; };
 		C8A79BFC292604AF009936DB /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79BFB292604AF009936DB /* NewsView.swift */; };
 		C8A79BFE29262C56009936DB /* NewsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79BFD29262C56009936DB /* NewsInfo.swift */; };
+		C8A79C0029263E2A009936DB /* IssManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79BFF29263E2A009936DB /* IssManager.swift */; };
+		C8A79C0229264A34009936DB /* IssView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79C0129264A34009936DB /* IssView.swift */; };
+		C8A79C0429264B02009936DB /* IssInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79C0329264B02009936DB /* IssInfoView.swift */; };
+		C8A79C0629264D11009936DB /* IssArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79C0529264D11009936DB /* IssArticleView.swift */; };
 		C8D3E88D2924BD5F00A05961 /* SpaceNewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3E88C2924BD5F00A05961 /* SpaceNewsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,10 @@
 		C84AE95529255B530047E348 /* NewsArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleView.swift; sourceTree = "<group>"; };
 		C8A79BFB292604AF009936DB /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		C8A79BFD29262C56009936DB /* NewsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInfo.swift; sourceTree = "<group>"; };
+		C8A79BFF29263E2A009936DB /* IssManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssManager.swift; sourceTree = "<group>"; };
+		C8A79C0129264A34009936DB /* IssView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssView.swift; sourceTree = "<group>"; };
+		C8A79C0329264B02009936DB /* IssInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssInfoView.swift; sourceTree = "<group>"; };
+		C8A79C0529264D11009936DB /* IssArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssArticleView.swift; sourceTree = "<group>"; };
 		C8D3E88C2924BD5F00A05961 /* SpaceNewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +181,9 @@
 				C84AE953292559450047E348 /* SpaceNewsView.swift */,
 				C84AE95529255B530047E348 /* NewsArticleView.swift */,
 				C8A79BFB292604AF009936DB /* NewsView.swift */,
+				C8A79C0129264A34009936DB /* IssView.swift */,
+				C8A79C0329264B02009936DB /* IssInfoView.swift */,
+				C8A79C0529264D11009936DB /* IssArticleView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 				C825B64A29239ED600B37596 /* urlhelper.swift */,
 				C8D3E88C2924BD5F00A05961 /* SpaceNewsManager.swift */,
 				C84AE95129254AB20047E348 /* DataApi.swift */,
+				C8A79BFF29263E2A009936DB /* IssManager.swift */,
 			);
 			path = "view models";
 			sourceTree = "<group>";
@@ -326,15 +338,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C84AE95229254AB20047E348 /* DataApi.swift in Sources */,
+				C8A79C0629264D11009936DB /* IssArticleView.swift in Sources */,
 				C825B6512923FBB800B37596 /* SelectDateView.swift in Sources */,
+				C8A79C0229264A34009936DB /* IssView.swift in Sources */,
 				C825B64F2923A6D400B37596 /* PhotoInfo.swift in Sources */,
 				C825B64D2923A56300B37596 /* pictureOfTodayView.swift in Sources */,
 				C8A79BFE29262C56009936DB /* NewsInfo.swift in Sources */,
+				C8A79C0429264B02009936DB /* IssInfoView.swift in Sources */,
 				C825B61C292396D700B37596 /* ContentView.swift in Sources */,
 				C825B61A292396D700B37596 /* SpaceAPPApp.swift in Sources */,
 				C825B647292397FF00B37596 /* NetWorkManager.swift in Sources */,
 				C8A79BFC292604AF009936DB /* NewsView.swift in Sources */,
 				C825B64B29239ED600B37596 /* urlhelper.swift in Sources */,
+				C8A79C0029263E2A009936DB /* IssManager.swift in Sources */,
 				C84AE95629255B530047E348 /* NewsArticleView.swift in Sources */,
 				C84AE954292559450047E348 /* SpaceNewsView.swift in Sources */,
 				C825B6492923990F00B37596 /* Constants.swift in Sources */,
