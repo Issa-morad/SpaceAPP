@@ -24,10 +24,10 @@ import Foundation
 
 import Foundation
 struct Iss: Codable {
-    let latitude: Double
-    let longitude: Double
-    let altitude: Double
-    let velocity: Double
+    var latitude: Double
+    var longitude: Double
+    var altitude: Double
+    var velocity: Double
     
     private enum CodingKeys: String, CodingKey {
         case latitude

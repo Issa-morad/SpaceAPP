@@ -22,15 +22,17 @@ struct PeopleView: View {
                 
                 VStack{
                     Text("NUMBER OF PEOPOLE IN SPACE: \(people.number)")
+                        .bold()
                     Spacer()
+                    
                     VStack{
                         ForEach (people.people) { people in
-                            Text("NAME:\(people.name)")
+                            Text("NAME: \(people.name)")
                                 .background(.red)
                                 .cornerRadius(5)
                                 .symbolVariant(.fill)
                                 .font(.title2).foregroundColor(.white)
-                            Text("SPACE CRAFT:\(people.craft)")
+                            Text("SPACE CRAFT: \(people.craft)")
                                 .background(.blue)
                                 .cornerRadius(5)
                                 .symbolVariant(.fill)
