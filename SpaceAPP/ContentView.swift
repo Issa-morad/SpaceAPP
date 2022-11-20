@@ -19,7 +19,7 @@ struct ContentView: View {
             .edgesIgnoringSafeArea(.all)
 
             VStack(alignment: .leading, spacing: 30 ){
-                Text("Welcom to SpaceApp")
+                Text("Welcome to SpaceApp")
                     .bold()
                     .font(.largeTitle) .foregroundColor(.white)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -51,6 +51,16 @@ struct ContentView: View {
                         IssView()
                     } label:{
                         Label("Go to ISS", systemImage: "newspaper.fill")
+                    }
+                    .padding()
+                    .background(.black)
+                    .cornerRadius(30)
+                    .symbolVariant(.fill)
+                    .font(.title).foregroundColor(.white)
+                    NavigationLink{
+                        PeopleView()
+                    } label:{
+                        Label("Go to People in space", systemImage: "newspaper.fill")
                     }
                     .padding()
                     .background(.black)

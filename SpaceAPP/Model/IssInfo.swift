@@ -2,7 +2,7 @@
 //  IssInfo.swift
 //  SpaceAPP
 //
-//  Created by majd morad on 2022-11-20.
+//  Created by Issa Morad on 2022-11-20.
 //
 
 import Foundation
