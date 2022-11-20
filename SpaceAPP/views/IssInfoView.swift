@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct IssInfoView: View {
+/*struct IssInfoView: View {
     @EnvironmentObject var data : IssManger
     @Environment(\.openURL) var openURL
     
     private var textWidth = 300.0
     var body: some View {
         HStack{
-            if let iss == data.iss { iss in
+            ForEach (data.iss) { a in
                 
-                IssArticleView(timestamp:iss.timestamp , issposition: IssLocation(latitude: iss.issposition.latitude, longitude: iss.issposition.longitude), message: iss.message)
+                IssArticleView(number: a.number , people:a.people, message: a.message)
                 }
     
             }
@@ -28,5 +28,5 @@ struct IssInfoView_Previews: PreviewProvider {
         IssInfoView()
             .environmentObject(IssManger())
     }
-}
+}*/
 

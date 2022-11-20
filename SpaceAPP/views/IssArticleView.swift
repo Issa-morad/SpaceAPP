@@ -7,22 +7,20 @@
 
 import SwiftUI
 
-struct IssArticleView: View {
+/*struct IssArticleView: View {
     
-    let timestamp: Int
-    let issposition: IssLocation
+    let number: Int
+    let people: [IssLocation]
     let message: String
+   // let name: String
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(timestamp)")
+            Text("\(number)")
                 .foregroundColor(.blue)
                 .italic()
             
-            Text("\(issposition.latitude)")
-                    .font(.headline)
-                    .padding(8)
-            Text("\(issposition.longitude)")
+            Text("\(people.description)")
                     .font(.headline)
                     .padding(8)
                 Text(message)
@@ -35,6 +33,6 @@ struct IssArticleView: View {
 
 struct IssArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        IssArticleView(timestamp: 0, issposition: IssLocation(latitude: 0.0, longitude: 0.0), message: "dhdcj")
+        IssArticleView(number: 0, people: [IssLocation(id: 0, name: "ggv")], message: "dhdcj")
     }
-}
+}*/

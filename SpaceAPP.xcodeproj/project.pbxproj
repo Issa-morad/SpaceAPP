@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32966A41292A331700914753 /* IssInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32966A40292A331700914753 /* IssInfo.swift */; };
 		C825B61A292396D700B37596 /* SpaceAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C825B619292396D700B37596 /* SpaceAPPApp.swift */; };
 		C825B61C292396D700B37596 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C825B61B292396D700B37596 /* ContentView.swift */; };
 		C825B61E292396D800B37596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C825B61D292396D800B37596 /* Assets.xcassets */; };
@@ -28,8 +29,6 @@
 		C8A79BFE29262C56009936DB /* NewsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79BFD29262C56009936DB /* NewsInfo.swift */; };
 		C8A79C0029263E2A009936DB /* IssManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79BFF29263E2A009936DB /* IssManager.swift */; };
 		C8A79C0229264A34009936DB /* IssView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79C0129264A34009936DB /* IssView.swift */; };
-		C8A79C0429264B02009936DB /* IssInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79C0329264B02009936DB /* IssInfoView.swift */; };
-		C8A79C0629264D11009936DB /* IssArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A79C0529264D11009936DB /* IssArticleView.swift */; };
 		C8D3E88D2924BD5F00A05961 /* SpaceNewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3E88C2924BD5F00A05961 /* SpaceNewsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32966A40292A331700914753 /* IssInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssInfo.swift; sourceTree = "<group>"; };
 		C825B616292396D700B37596 /* SpaceAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C825B619292396D700B37596 /* SpaceAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceAPPApp.swift; sourceTree = "<group>"; };
 		C825B61B292396D700B37596 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,8 +74,6 @@
 		C8A79BFD29262C56009936DB /* NewsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInfo.swift; sourceTree = "<group>"; };
 		C8A79BFF29263E2A009936DB /* IssManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssManager.swift; sourceTree = "<group>"; };
 		C8A79C0129264A34009936DB /* IssView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssView.swift; sourceTree = "<group>"; };
-		C8A79C0329264B02009936DB /* IssInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssInfoView.swift; sourceTree = "<group>"; };
-		C8A79C0529264D11009936DB /* IssArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssArticleView.swift; sourceTree = "<group>"; };
 		C8D3E88C2924BD5F00A05961 /* SpaceNewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +167,7 @@
 			children = (
 				C825B64E2923A6D400B37596 /* PhotoInfo.swift */,
 				C8A79BFD29262C56009936DB /* NewsInfo.swift */,
+				32966A40292A331700914753 /* IssInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,8 +181,6 @@
 				C84AE95529255B530047E348 /* NewsArticleView.swift */,
 				C8A79BFB292604AF009936DB /* NewsView.swift */,
 				C8A79C0129264A34009936DB /* IssView.swift */,
-				C8A79C0329264B02009936DB /* IssInfoView.swift */,
-				C8A79C0529264D11009936DB /* IssArticleView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -338,15 +335,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C84AE95229254AB20047E348 /* DataApi.swift in Sources */,
-				C8A79C0629264D11009936DB /* IssArticleView.swift in Sources */,
 				C825B6512923FBB800B37596 /* SelectDateView.swift in Sources */,
 				C8A79C0229264A34009936DB /* IssView.swift in Sources */,
 				C825B64F2923A6D400B37596 /* PhotoInfo.swift in Sources */,
 				C825B64D2923A56300B37596 /* pictureOfTodayView.swift in Sources */,
 				C8A79BFE29262C56009936DB /* NewsInfo.swift in Sources */,
-				C8A79C0429264B02009936DB /* IssInfoView.swift in Sources */,
 				C825B61C292396D700B37596 /* ContentView.swift in Sources */,
 				C825B61A292396D700B37596 /* SpaceAPPApp.swift in Sources */,
+				32966A41292A331700914753 /* IssInfo.swift in Sources */,
 				C825B647292397FF00B37596 /* NetWorkManager.swift in Sources */,
 				C8A79BFC292604AF009936DB /* NewsView.swift in Sources */,
 				C825B64B29239ED600B37596 /* urlhelper.swift in Sources */,

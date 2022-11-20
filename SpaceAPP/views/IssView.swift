@@ -8,24 +8,67 @@
 import SwiftUI
 
 struct IssView: View {
-    @StateObject var data = IssManger()
-    @State private var opacity = 0.0
+    @State var  iss = Iss.default
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack{
-                IssInfoView()
-                    .opacity(opacity)
+                HStack {
+                    Text("ISS")
+                        .bold()
+                        .font(.largeTitle)
+                }
+                AsyncImage(url: URL(string:"https://image.cnbcfm.com/api/v1/image/106944370-1632155941607-2-Full_station_ISSperspective.png?v=1632156028")) { image in image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 390)
+                }placeholder: {
+                    ProgressView()
+                }
+                .frame(maxWidth: .infinity)
+                Spacer()
+                HStack{
+                    Text("Latitude  \(iss.latitude)")
+                }
+                .padding()
+                .background(.blue)
+                .cornerRadius(30)
+                .symbolVariant(.fill)
+                .font(.title).foregroundColor(.white)
+                Spacer()
+                HStack {
+                    Text("Longitude  \(iss.longitude)")
+                }
+                .padding()
+                .background(.black)
+                .cornerRadius(30)
+                .symbolVariant(.fill)
+                .font(.title).foregroundColor(.white)
+                Spacer()
+                HStack {
+                    Text ("Altitude  \(iss.altitude)")
+                }
+                .padding()
+                .background(.blue)
+                .cornerRadius(30)
+                .symbolVariant(.fill)
+                .font(.title).foregroundColor(.white)
+                Spacer()
+                HStack {
+                    Text("Velocity  \(iss.velocity)")
+                    
+                }
+                .padding()
+                .background(.black)
+                .cornerRadius(30)
+                .symbolVariant(.fill)
+                .font(.title).foregroundColor(.white)
                 
-            }
-            .navigationTitle("Space News")
-            .environmentObject(data)
-            .onAppear{
-                data.getNews()
-                
-                withAnimation(.easeIn(duration: 2)) {
-                    opacity = 1.0
+            } .task {
+                if let response = await IssManager().getIss() {
+                    iss = response
                 }
             }
+            Spacer()
         }
     }
 }
@@ -34,3 +77,4 @@ struct IssView_Previews: PreviewProvider {
         IssView()
     }
 }
+
