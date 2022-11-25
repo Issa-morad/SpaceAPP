@@ -50,7 +50,7 @@ struct ContentView: View {
                     NavigationLink{
                         IssView()
                     } label:{
-                        Label("Go to ISS", systemImage: "newspaper.fill")
+                        Label("Go to ISS", systemImage: "location.fill")
                     }
                     .padding()
                     .background(.black)
@@ -60,7 +60,7 @@ struct ContentView: View {
                     NavigationLink{
                         PeopleView()
                     } label:{
-                        Label("Go to People in space", systemImage: "newspaper.fill")
+                        Label("Go to People in space", systemImage: "person.fill")
                     }
                     .padding()
                     .background(.black)
