@@ -18,26 +18,28 @@ struct PeopleView: View {
                         .bold()
                         .font(.largeTitle)
                 }
-                Spacer()
+                //Spacer()
                 
                 VStack{
                     Text("NUMBER OF PEOPOLE IN SPACE: \(people.number)")
                         .bold()
-                    Spacer()
+                    //Spacer()
                     
                     VStack{
+                        Spacer()
                         ForEach (people.people) { people in
                             Text("NAME: \(people.name)")
-                                .background(.red)
-                                .cornerRadius(5)
+                               // .background(.black)
+                                //.cornerRadius(5)
                                 .symbolVariant(.fill)
-                                .font(.title2).foregroundColor(.white)
+                                .font(.title3).foregroundColor(.black)
                             Text("SPACE CRAFT: \(people.craft)")
-                                .background(.blue)
-                                .cornerRadius(5)
+                                //.background(.black)
+                                //.cornerRadius(5)
                                 .symbolVariant(.fill)
-                                .font(.title3).foregroundColor(.white)
+                                .foregroundColor(.black)
                             Spacer()
+                            Divider()
                         }.task {
                             text = await PeopleManager().getString()
                             if let response = await PeopleManager().getPeople() {
