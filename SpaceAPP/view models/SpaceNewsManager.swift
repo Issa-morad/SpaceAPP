@@ -10,7 +10,7 @@
 import Foundation
 
 
-@MainActor class SpaceNew : ObservableObject {
+@MainActor class SpaceNew : ObservableObject { // @MainActor updating the ui
     @Published var news: [SpaceData] = []
     
     func getNews(){
@@ -26,8 +26,8 @@ import Foundation
                 return
             }
             let spaceData = try! JSONDecoder().decode([SpaceData].self, from: data)
-            
-            DispatchQueue.main.async {
+              // if thats work go ahead
+            DispatchQueue.main.async { // update the data
                 print("successfully, Articles: \(spaceData.count)")
                 self.news = spaceData
             }

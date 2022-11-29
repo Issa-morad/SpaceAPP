@@ -22,14 +22,15 @@ struct NewsArticleView: View {
                 .italic()
             HStack(alignment: .center) {
                 CachedAsyncImage (url: URL(string: imagUrl),
-                                  transaction: Transaction(animation: .easeInOut)) {
+                                  transaction: Transaction(animation: .easeInOut)) // add animation
+                {
                     phase in
                     if let image = phase.image{
                         image
                             .resizable()
                             .scaledToFit()
                             .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .transition(.opacity)
+                            .transition(.opacity) // load image
                     } else {
                         HStack {
                             ProgressView()

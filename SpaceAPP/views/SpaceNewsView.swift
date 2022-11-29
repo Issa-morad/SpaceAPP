@@ -18,6 +18,7 @@ struct SpaceNewsView: View {
                 
                     .onTapGesture {
                         openURL (URL(string: news.url)!)
+                        // url will never be empty
                     }
             }
             .refreshable {
@@ -35,21 +36,4 @@ struct SpaceNewsView_Previews: PreviewProvider {
 }
 
 
-/*
- @StateObject var data = SpaceNew()
- @State private var opacity = 0.0
- NavigationView {
- VStack{
-     
- }
- .navigationTitle("Space News")
- .environmentObject(data)
- .onAppear{
-     data.getNews()
-     
-     withAnimation(.easeIn(duration: 2)) {
-         opacity = 1.0
-     }
- }
-}
-}*/
+

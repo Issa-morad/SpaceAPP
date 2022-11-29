@@ -9,7 +9,7 @@ import SwiftUI
 
 struct pictureOfTodayView: View {
     @ObservedObject var manager = NetWorkManager()
-    @State private var showSwitchDte: Bool = false
+    @State private var showSwitchDte: Bool = false // pop over
     
     var body: some View {
         VStack(alignment: .center, spacing: 20){
@@ -27,7 +27,7 @@ struct pictureOfTodayView: View {
                 SelectDateView(manager: self.manager)
             }
             
-           if manager.image != nil {
+           if manager.image != nil { // fetch image
                 Image(uiImage: self.manager.image!)
                     .resizable()
                     .scaledToFit()

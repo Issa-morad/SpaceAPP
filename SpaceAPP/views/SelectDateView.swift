@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct SelectDateView: View {
-    @State private var date = Date()
+    @State private var date = Date() // to use a date picker
     
     @ObservedObject var manager: NetWorkManager
     
     @Environment(\.presentationMode) var presentation
+    // dismiss this view
     var body: some View {
         VStack{
             Text("Select a day").font(.headline)
-            
+            //...Date() just date in the past
             DatePicker(selection: $date, in: ...Date(), displayedComponents: .date){
                 Text("select")
             }.labelsHidden()

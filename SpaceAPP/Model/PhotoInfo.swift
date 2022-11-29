@@ -71,17 +71,5 @@ struct PhotoInfo: Codable, Identifiable { // consist of an encodable and decodab
         return photoInfo
     }
 }
-   /* static func createDefault() -> Photoinfo {
-        var photoInfo = Photoinfo()
-        photoInfo.title = ""
-        photoInfo.description = ""
-        photoInfo.date = ""
-        return photoInfo
-    }*/
-    /*
-     init() {
-          self.description = "long lasting description"
-           self.title = "title"
-           self.date = "2022-11-15"
-       }*/
+ 
 
