@@ -19,12 +19,12 @@
 import Foundation
 import SwiftUI
 
-struct PhotoInfo: Codable, Identifiable {
+struct PhotoInfo: Codable, Identifiable { // consist of an encodable and decodable protocol to convert diffrent data types to each other
     
     
     var title: String
     var description: String
-    var url: URL?
+    var url: URL? // for the image
     var copyright: String?
     var date: String
     let id = UUID()
@@ -36,7 +36,7 @@ struct PhotoInfo: Codable, Identifiable {
         return dateFormatter.date(from: self.date) ?? Date()
     }
     
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey { // CodingKeys: looking for JSON file
         case title = "title"
         case description = "explanation"
         case url = "url"
@@ -45,9 +45,9 @@ struct PhotoInfo: Codable, Identifiable {
         
         
     }
-    init(from decoder: Decoder) throws {
-        let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
-        
+    init(from decoder: Decoder) throws { // create my own initializer, access data by decoder
+        let valueContainer = try decoder.container(keyedBy: CodingKeys.self) // .self to use this type here
+        // access my JSON data
         self.title = try valueContainer.decode(String.self, forKey: CodingKeys.title)
         self.description = try valueContainer.decode(String.self, forKey: CodingKeys.description)
         self.url = try valueContainer.decode(URL.self, forKey: CodingKeys.url)
@@ -56,7 +56,7 @@ struct PhotoInfo: Codable, Identifiable {
         
     }
     
-    init() {
+    init() { // initializer for testing, this is empty
         self.description = ""
         self.title = ""
         self.date = ""

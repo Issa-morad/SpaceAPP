@@ -9,22 +9,22 @@ import Foundation
 import Combine
 import SwiftUI
 
-class NetWorkManager: ObservableObject {
+class NetWorkManager: ObservableObject { // ObservableObject at use it in my swiftui views
     
     @Published var date: Date = Date()
     
-    @Published var photoInfo = PhotoInfo()
+    @Published var photoInfo = PhotoInfo() // holds the information of my photoInfo
     @Published var image: UIImage? = nil
     
     
-    private var subscriptions = Set<AnyCancellable>()
-    
-    
+    private var subscriptions = Set<AnyCancellable>() // stor the subscripthion, AnyCancellable: because during the init, when the NetWorkManager leaves the heap all this
+                                                      // AnyCancellable subscriptions be automatically for me to cancel
     init(){
         // create url
-        let url = URL(string: Constants.baseURL)!
+        let url = URL(string: Constants.baseURL)! // constucting url, don't get the baseURL ->not able to fetch anythings
         
-        let fullURL = url.withQuery(["api_key" : Constants.key])!
+        // fetch data
+        let fullURL = url.withQuery(["api_key" : Constants.key])! // need here a dictionarythat the key value pair
         print(url.withQuery(["api_key" : Constants.key])!)
         print(fullURL.absoluteString)
         
@@ -32,7 +32,7 @@ class NetWorkManager: ObservableObject {
         $date.removeDuplicates()
             .sink { (value) in
                 self.image = nil
-            } .store(in: &subscriptions)
+            } .store(in: &subscriptions) // return value and stor them in subscription
         
         $date.removeDuplicates()
             .map {
@@ -41,8 +41,8 @@ class NetWorkManager: ObservableObject {
                 API.createPublisher(url: url)
                     
             }
-            .receive(on: RunLoop.main)
-            .assign(to: \.photoInfo, on: self)
+            .receive(on: RunLoop.main) // this is the main queue, allowed to publish changes from the background queue on the main queue
+            .assign(to: \.photoInfo, on: self) // assign this new one to my property, on root self
             .store(in: &subscriptions)
         
         
@@ -52,8 +52,8 @@ class NetWorkManager: ObservableObject {
                 return photoInfo.url!
                 
             }.flatMap { (url) in
-                URLSession.shared.dataTaskPublisher(for: url)
-                    .map(\.data)
+                URLSession.shared.dataTaskPublisher(for: url) // fetching the data, URLSession fetch request, Publisher because want to work with combien
+                    .map(\.data) // only use my data
                     .catch({ error in
                         return Just(Data())
                     })
@@ -77,7 +77,7 @@ class NetWorkManager: ObservableObject {
          }
          
          }) { (data, response) in
-         if let desription = String(data: data, encoding: .utf8){
+         if let desription = String(data: data, encoding: .utf8){ // encoding: .utf8: gives the easy access of the information that we just featched
          print("fetched new data \(desription)")
          }
          
