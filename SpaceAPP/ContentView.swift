@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("like") private var like = 0
+    @AppStorage("dislike") private var dislike = 0
     var body: some View {
-        
  NavigationStack{
         ZStack{
            Image("spaceimage")
@@ -25,6 +26,20 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal,24)
+                Button ("Like App: \(like)") {
+                    like += 1
+                }
+                .bold()
+                .font(.title2)
+                .foregroundColor(.green)
+                .padding()
+                Button ("Dislike App: \(dislike)") {
+                    dislike += 1
+                }
+                .bold()
+                .font(.title2)
+                .foregroundColor(.yellow)
+                .padding()
             
                 VStack(alignment: .leading, spacing: 20){
                     NavigationLink{
