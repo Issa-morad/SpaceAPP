@@ -2,7 +2,7 @@
 //  PeopleInSpace.swift
 //  SpaceAPP
 //
-//  Created byIssa Moradon 2022-11-20.
+//  Created byI ssa Morad on 2022-11-20.
 
 import Foundation
 

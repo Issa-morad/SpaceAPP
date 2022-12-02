@@ -14,7 +14,6 @@ struct NewsArticleView: View {
     let siteName: String
     let summary: String
     
-    
     var body: some View {
         VStack(alignment: .leading) {
             Text(siteName)

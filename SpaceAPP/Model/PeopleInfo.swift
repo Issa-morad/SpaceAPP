@@ -2,7 +2,7 @@
 //  PeopleInfo.swift
 //  SpaceAPP
 //
-//  Created by majd morad on 2022-11-20.
+//  Created by Issa Morad on 2022-11-20.
 //
 //http://api.open-notify.org/astros.json
 

@@ -21,7 +21,6 @@ import SwiftUI
 
 struct PhotoInfo: Codable, Identifiable { // consist of an encodable and decodable protocol to convert diffrent data types to each other
     
-    
     var title: String
     var description: String
     var url: URL? // for the image
@@ -42,8 +41,6 @@ struct PhotoInfo: Codable, Identifiable { // consist of an encodable and decodab
         case url = "url"
         case copyright = "copyright"
         case date = "date"
-        
-        
     }
     init(from decoder: Decoder) throws { // create my own initializer, access data by decoder
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self) // .self to use this type here
@@ -53,7 +50,6 @@ struct PhotoInfo: Codable, Identifiable { // consist of an encodable and decodab
         self.url = try valueContainer.decode(URL.self, forKey: CodingKeys.url)
         self.copyright = try? valueContainer.decode(String.self, forKey: CodingKeys.copyright)
         self.date = try valueContainer.decode(String.self, forKey: CodingKeys.date)
-        
     }
     
     init() { // initializer for testing, this is empty
