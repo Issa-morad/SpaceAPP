@@ -19,7 +19,6 @@ struct PeopleView: View {
                         .font(.largeTitle)
                 }
                 //Spacer()
-                
                 VStack{
                     Text("NUMBER OF PEOPOLE IN SPACE: \(people.number)")
                         .bold()

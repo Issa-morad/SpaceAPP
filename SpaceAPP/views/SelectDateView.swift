@@ -9,9 +9,7 @@ import SwiftUI
 
 struct SelectDateView: View {
     @State private var date = Date() // to use a date picker
-    
     @ObservedObject var manager: NetWorkManager
-    
     @Environment(\.presentationMode) var presentation
     // dismiss this view
     var body: some View {

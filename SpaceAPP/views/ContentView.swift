@@ -26,21 +26,27 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal,24)
-                Button ("Like App: \(like)") {
-                    like += 1
+                HStack{
+                    Button ("Like App: \(like)") {
+                        like += 1
+                    }
+                    .bold()
+                    .font(.title3)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(.blue)
+                    .cornerRadius(8)
+                    Button ("Dislike App: \(dislike)") {
+                        dislike += 1
+                    }
+                    .bold()
+                    .font(.title3)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(.red)
+                    .cornerRadius(8)
                 }
-                .bold()
-                .font(.title2)
-                .foregroundColor(.green)
-                .padding()
-                Button ("Dislike App: \(dislike)") {
-                    dislike += 1
-                }
-                .bold()
-                .font(.title2)
-                .foregroundColor(.yellow)
-                .padding()
-            
+                Spacer()
                 VStack(alignment: .leading, spacing: 20){
                     NavigationLink{
                         pictureOfTodayView()

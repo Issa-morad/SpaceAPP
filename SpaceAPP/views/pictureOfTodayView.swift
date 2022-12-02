@@ -10,13 +10,10 @@ import SwiftUI
 struct pictureOfTodayView: View {
     @ObservedObject var manager = NetWorkManager()
     @State private var showSwitchDte: Bool = false // pop over
-    
     var body: some View {
         VStack(alignment: .center, spacing: 20){
-            
            Button(action: {
                 self.showSwitchDte.toggle()
-                
             }){
                 Image(systemName: "calendar")
                 Text("switch day")
@@ -26,7 +23,6 @@ struct pictureOfTodayView: View {
             .popover(isPresented: $showSwitchDte) {
                 SelectDateView(manager: self.manager)
             }
-            
            if manager.image != nil { // fetch image
                 Image(uiImage: self.manager.image!)
                     .resizable()

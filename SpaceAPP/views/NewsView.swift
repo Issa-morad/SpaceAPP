@@ -10,9 +10,7 @@ import SwiftUI
 struct NewsView: View {
     @StateObject var data = SpaceNew()
     @State private var opacity = 0.0
-    
     var body: some View {
-       
         NavigationView {
             VStack{
                 SpaceNewsView()

@@ -135,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				C825B619292396D700B37596 /* SpaceAPPApp.swift */,
-				C825B61B292396D700B37596 /* ContentView.swift */,
 				C825B6452923978700B37596 /* view models */,
 				C825B6442923976000B37596 /* views */,
 				C825B6432923971000B37596 /* Model */,
@@ -185,6 +184,7 @@
 		C825B6442923976000B37596 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				C825B61B292396D700B37596 /* ContentView.swift */,
 				C825B64C2923A56300B37596 /* pictureOfTodayView.swift */,
 				C825B6502923FBB800B37596 /* SelectDateView.swift */,
 				C84AE953292559450047E348 /* SpaceNewsView.swift */,

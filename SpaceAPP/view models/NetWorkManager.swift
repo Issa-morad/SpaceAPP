@@ -12,7 +12,6 @@ import SwiftUI
 class NetWorkManager: ObservableObject { // ObservableObject at use it in my swiftui views
     
     @Published var date: Date = Date() // return date which is today
-    
     @Published var photoInfo = PhotoInfo() // holds the information of my photoInfo
     @Published var image: UIImage? = nil //   return image, must use SwiftUI
     
