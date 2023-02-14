@@ -38,7 +38,7 @@ struct PeopleView: View {
                                 .symbolVariant(.fill)
                                 .foregroundColor(.black)
                             Spacer()
-                            Divider()
+                            Divider()// layout to make lines
                         }.task {
                             text = await PeopleManager().getString()
                             if let response = await PeopleManager().getPeople() {

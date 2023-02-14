@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NewsView: View {
-    @StateObject var data = SpaceNew()
-    @State private var opacity = 0.0
+    @StateObject var data = SpaceNew()//view receive the object to initialise it
+    @State private var opacity = 0.0 // view own the data, value can change
     var body: some View {
         NavigationView {
             VStack{
@@ -18,7 +18,7 @@ struct NewsView: View {
                 
             }
             .navigationTitle("Space News")
-            .environmentObject(data)
+            .environmentObject(data)// lets us to create views that rely on shared data, data shared with many views in the app
             .onAppear{
                 data.getNews()
                 

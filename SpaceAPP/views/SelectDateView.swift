@@ -23,7 +23,7 @@ struct SelectDateView: View {
             Button( action: {
                 
                 self.manager.date = self.date
-                self.presentation.wrappedValue.dismiss()
+                self.presentation.wrappedValue.dismiss() // to showe another view "APOD"
             }) {
                 Text("Done")
             }

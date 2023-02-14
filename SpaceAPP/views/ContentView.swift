@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("like") private var like = 0
+    @AppStorage("like") private var like = 0//userDefault,save user setting
     @AppStorage("dislike") private var dislike = 0
     var body: some View {
  NavigationStack{
-        ZStack{
+        ZStack{ // z-axis, layout view that overlays its subview
            Image("spaceimage")
             .resizable()
             .aspectRatio(contentMode: .fill)

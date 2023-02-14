@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct pictureOfTodayView: View {
-    @ObservedObject var manager = NetWorkManager()
+    @ObservedObject var manager = NetWorkManager() //used when object created externally"out side the view", and passed to it
     @State private var showSwitchDte: Bool = false // pop over
     var body: some View {
         VStack(alignment: .center, spacing: 20){
@@ -18,7 +18,7 @@ struct pictureOfTodayView: View {
                 Image(systemName: "calendar")
                 Text("switch day")
             }
-            .padding(.trailing)
+            .padding(.trailing) // trailing is layout
             .frame(maxWidth: .infinity, alignment: .trailing)
             .popover(isPresented: $showSwitchDte) {
                 SelectDateView(manager: self.manager)

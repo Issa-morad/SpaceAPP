@@ -18,7 +18,7 @@ struct NewsArticleView: View {
         VStack(alignment: .leading) {
             Text(siteName)
                 .foregroundColor(.blue)
-                .italic()
+                .italic()// type of text
             HStack(alignment: .center) {
                 CachedAsyncImage (url: URL(string: imagUrl),
                                   transaction: Transaction(animation: .easeInOut)) // add animation

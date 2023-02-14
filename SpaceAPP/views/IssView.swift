@@ -20,6 +20,7 @@ struct IssView: View {
                 AsyncImage(url: URL(string:"https://image.cnbcfm.com/api/v1/image/106944370-1632155941607-2-Full_station_ISSperspective.png?v=1632156028")) { image in image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                    //show the whole image by scalees the image fit to the view size
                         .frame(width: 390)
                 }placeholder: {
                     ProgressView()
@@ -63,9 +64,9 @@ struct IssView: View {
                 .symbolVariant(.fill)
                 .font(.title).foregroundColor(.white)
                 
-            } .task {
+            } .task { // to start async work when view is showen
                 if let response = await IssManager().getIss() {
-                    iss = response
+                    iss = response // waits for answer from async fun
                 }
             }
             Spacer()

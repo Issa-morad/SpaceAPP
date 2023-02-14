@@ -15,7 +15,7 @@ struct SpaceNewsView: View {
         List{
             ForEach(data.news) { news in
                 NewsArticleView(title: news.title, imagUrl: news.imageUrl, siteName: news.newsSite, summary: news.summary)
-                    .onTapGesture {
+                    .onTapGesture {// add an action to perform when the view has it
                         openURL (URL(string: news.url)!)
                         // url will never be empty
                     }
