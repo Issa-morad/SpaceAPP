@@ -10,7 +10,7 @@ import Combine
 import SwiftUI
 
 class NetWorkManager: ObservableObject { // ObservableObject at use it in my swiftui views
-    
+    //Published used to create publisher for value , "to used in view"
     @Published var date: Date = Date() // return date which is today
     @Published var photoInfo = PhotoInfo() // holds the information of my photoInfo
     @Published var image: UIImage? = nil //   return image, must use SwiftUI
@@ -23,7 +23,7 @@ class NetWorkManager: ObservableObject { // ObservableObject at use it in my swi
         let url = URL(string: Constants.baseURL)! // constucting url, don't get the baseURL ->not able to fetch anythings
         
         // fetch data
-        let fullURL = url.withQuery(["api_key" : Constants.key])! // need here a dictionarythat the key value pair
+        let fullURL = url.withQuery(["api_key" : Constants.key])! // need here a dictionary that the key, value "pair"
         print(url.withQuery(["api_key" : Constants.key])!)
         print(fullURL.absoluteString)
         

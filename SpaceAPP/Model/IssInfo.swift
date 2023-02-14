@@ -23,13 +23,13 @@ import Foundation
 //https://api.wheretheiss.at/v1/satellites/25544
 
 import Foundation
-struct Iss: Codable {
+struct Iss: Codable { //Codable to map JSON to swift    struct
     var latitude: Double
     var longitude: Double
     var altitude: Double
     var velocity: Double
     
-    private enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey { // keys for each of the enum cases
         case latitude
         case longitude
         case altitude

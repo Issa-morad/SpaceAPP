@@ -10,7 +10,7 @@
 import Foundation
 
 
-@MainActor class SpaceNew : ObservableObject { // @MainActor updating the ui
+@MainActor class SpaceNew : ObservableObject { // @MainActor updating the ui and ensure that they run on the main thread
     @Published var news: [SpaceData] = []
     func getNews(){
         guard let url = URL(string: "https://api.spaceflightnewsapi.net/v3/articles?_limit=20") else{
