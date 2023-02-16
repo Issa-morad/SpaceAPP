@@ -11,6 +11,7 @@ struct SelectDateView: View {
     @State private var date = Date() // to use a date picker
     @ObservedObject var manager: NetWorkManager
     @Environment(\.presentationMode) var presentation
+    //create views that rely on shared data
     // dismiss this view
     var body: some View {
         VStack{

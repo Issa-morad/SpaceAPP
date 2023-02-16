@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SpaceNewsView: View {
-    @EnvironmentObject var data : SpaceNew
+    @EnvironmentObject var data : SpaceNew //create views that rely on shared data
     @Environment(\.openURL) var openURL
     private var textWidth = 300.0
     var body: some View {

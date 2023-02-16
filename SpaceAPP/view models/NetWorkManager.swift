@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Combine
+import Combine // declartive swift API for processing values over time
 import SwiftUI
 
 class NetWorkManager: ObservableObject { // ObservableObject at use it in my swiftui views
@@ -20,7 +20,7 @@ class NetWorkManager: ObservableObject { // ObservableObject at use it in my swi
                                                       // AnyCancellable subscriptions be automatically for me to cancel
     init(){
         // create url
-        let url = URL(string: Constants.baseURL)! // constucting url, don't get the baseURL ->not able to fetch anythings
+        let url = URL(string: Constants.baseURL)! // constructing url, don't get the baseURL ->not able to fetch anythings
         
         // fetch data
         let fullURL = url.withQuery(["api_key" : Constants.key])! // need here a dictionary that the key, value "pair"
