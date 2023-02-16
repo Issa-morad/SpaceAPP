@@ -37,7 +37,7 @@ struct API {
         }
     }
     
-    static func createPublisher(url: URL) -> AnyPublisher<PhotoInfo, Never> {
+    static func createPublisher(url: URL) -> AnyPublisher<PhotoInfo, Never> {// dont return anything
         URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
             .decode(type: PhotoInfo.self, decoder: JSONDecoder()) // JSONDecoder transform JSONfile to swift  object
